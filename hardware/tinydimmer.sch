@@ -512,10 +512,10 @@ U 1 1 5DC4BF5F
 P 4200 4175
 F 0 "R2" V 3993 4175 50  0000 C CNN
 F 1 "1K" V 4084 4175 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4130 4175 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P5.08mm_Vertical" V 4130 4175 50  0001 C CNN
 F 3 "~" H 4200 4175 50  0001 C CNN
 	1    4200 4175
-	0    1    1    0   
+	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:R R3
@@ -523,7 +523,7 @@ U 1 1 5DC4BB62
 P 4450 4425
 F 0 "R3" H 4520 4471 50  0000 L CNN
 F 1 "10K" H 4520 4380 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4380 4425 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P5.08mm_Vertical" V 4380 4425 50  0001 C CNN
 F 3 "~" H 4450 4425 50  0001 C CNN
 	1    4450 4425
 	1    0    0    -1  
@@ -617,29 +617,29 @@ F 3 "" H 9275 2275 50  0001 C CNN
 	1    9275 2275
 	0    -1   -1   0   
 $EndComp
-Text GLabel 9175 1400 0    50   Input ~ 0
+Text GLabel 9175 1300 0    50   Input ~ 0
 SW_POS
-Text GLabel 9175 1200 0    50   Input ~ 0
+Text GLabel 9175 1600 0    50   Input ~ 0
 SW_NEG
 Text GLabel 9175 1700 0    50   Input ~ 0
 POT_POS
 Wire Wire Line
-	9375 1500 9275 1500
-Wire Wire Line
-	9275 1500 9275 1600
-Wire Wire Line
-	9275 1600 9375 1600
-Wire Wire Line
 	9375 1400 9275 1400
+Wire Wire Line
+	9275 1400 9275 1500
+Wire Wire Line
+	9275 1500 9375 1500
 Wire Wire Line
 	9375 1300 9275 1300
 Wire Wire Line
-	9275 1300 9275 1400
-Connection ~ 9275 1400
+	9375 1200 9275 1200
 Wire Wire Line
-	9275 1400 9175 1400
+	9275 1200 9275 1300
+Connection ~ 9275 1300
 Wire Wire Line
-	9375 1200 9175 1200
+	9275 1300 9175 1300
+Wire Wire Line
+	9375 1600 9175 1600
 Wire Wire Line
 	9375 1700 9175 1700
 $Comp
@@ -654,8 +654,8 @@ F 3 "" H 9275 1850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9275 1850 9275 1600
-Connection ~ 9275 1600
+	9275 1850 9275 1500
+Connection ~ 9275 1500
 Wire Wire Line
 	5250 6050 5450 6050
 Connection ~ 5250 6050
@@ -707,7 +707,7 @@ U 1 1 5DCC95A1
 P 4350 6300
 F 0 "D5" V 4350 6150 50  0000 L CNN
 F 1 "1N5231" V 4450 6000 50  0000 L CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 4350 6300 50  0001 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P3.81mm_Vertical_AnodeUp" H 4350 6300 50  0001 C CNN
 F 3 "~" H 4350 6300 50  0001 C CNN
 	1    4350 6300
 	0    1    1    0   
@@ -849,12 +849,6 @@ Wire Notes Line
 	4575 925  4575 1325
 Wire Notes Line
 	4575 1325 4600 1325
-Text Notes 9725 1725 0    100  ~ 0
-To potentiometer
-Text Notes 9725 1525 0    100  ~ 0
-To LED PSU
-Text Notes 9725 1325 0    100  ~ 0
-To LEDs
 Wire Wire Line
 	5125 3875 4850 3875
 Connection ~ 4850 3875
@@ -910,24 +904,17 @@ F 3 "~" H 10475 2750 50  0001 C CNN
 	1    10475 2750
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	10175 2850 10325 2850
 $Comp
 L power:GND #PWR021
 U 1 1 5DDB9F38
-P 10325 2950
-F 0 "#PWR021" H 10325 2700 50  0001 C CNN
-F 1 "GND" H 10330 2777 50  0000 C CNN
-F 2 "" H 10325 2950 50  0001 C CNN
-F 3 "" H 10325 2950 50  0001 C CNN
-	1    10325 2950
+P 10475 3000
+F 0 "#PWR021" H 10475 2750 50  0001 C CNN
+F 1 "GND" H 10480 2827 50  0000 C CNN
+F 2 "" H 10475 3000 50  0001 C CNN
+F 3 "" H 10475 3000 50  0001 C CNN
+	1    10475 3000
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	10325 2950 10325 2850
-Connection ~ 10325 2850
-Wire Wire Line
-	10325 2850 10475 2850
 Wire Wire Line
 	9275 2275 9375 2275
 Wire Wire Line
@@ -946,4 +933,40 @@ Wire Wire Line
 Connection ~ 3300 1750
 Wire Wire Line
 	3300 1750 3300 2200
+$Comp
+L Mechanical:MountingHole_Pad H5
+U 1 1 5DD960E1
+P 10775 2750
+F 0 "H5" H 10875 2753 50  0000 L CNN
+F 1 "MountingHole_Pad" H 10875 2708 50  0001 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 10775 2750 50  0001 C CNN
+F 3 "~" H 10775 2750 50  0001 C CNN
+	1    10775 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10475 2850 10475 2925
+Wire Wire Line
+	10775 2850 10775 2925
+Connection ~ 10475 2925
+Wire Wire Line
+	10475 2925 10775 2925
+Wire Wire Line
+	10475 2925 10475 3000
+Text Notes 9700 1750 0    50   ~ 0
+Potentiometer positive
+Text Notes 9700 1550 0    50   ~ 0
+Potentiometer negative
+Text Notes 9700 1650 0    50   ~ 0
+Load ground
+Text Notes 9700 1250 0    50   ~ 0
+Load positive
+Text Notes 9700 1450 0    50   ~ 0
+Supply ground
+Text Notes 9700 1350 0    50   ~ 0
+Supply positive
+Wire Wire Line
+	10175 2850 10175 2925
+Wire Wire Line
+	10175 2925 10475 2925
 $EndSCHEMATC
