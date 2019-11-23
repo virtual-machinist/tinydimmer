@@ -1,0 +1,19 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP Busch_Dimmer_2112U_101
+D Busch-Dimmer 2112U-101 Electronic Potentiometer
+F https://www.busch-jaeger.de/files/files_ONLINE/2112_BJE_OA_2012-12-17_EN_R01.pdf
+$ENDCMP
+#
+$CMP Digispark_USB
+D Digistump Digispark USB ATtiny85 Microcontroller Module
+K digispark,attiny85
+$ENDCMP
+#
+$CMP Hahn_EL_305_2051
+D Hahn EL 305 2051, 3VA, 230V Primary, 9V Secondary Transformer, PCB
+K transformer hahn
+F http://www.hahn-trafo.com/PDFs/Flyer/ttechnik/EI_30.pdf
+$ENDCMP
+#
+#End Doc Library
