@@ -2,7 +2,7 @@
 
 const int minPwm = 16;
 const int maxPwm = 255;
-const int endClamp = 250;
+const int endClamp = 240;
 
 extern int mapToPwm(int rawAnalogValue);
 
@@ -21,8 +21,8 @@ void loop()
 	} else {
 		analogWrite(1, 0);
 	}
-	// poll 4 times a second
-	delay(250);
+	// poll 10 times a second
+	delay(100);
 }
 
 int mapToPwm(int rawAnalogValue)
