@@ -59,9 +59,9 @@ After power on and boot:
 
 ## ~~Known Issues~~ Room for Improvement
 
-* Currently the dimmer is powered on constantly since I haven't yet figured out how to program ATTiny85 without a bootloader (or with a minimal one). Default boot times are over 2 seconds. This consumes ~2W at all times, so can add up to ~20kWH a year. Will definitely be revisiting this.
+* Currently the dimmer is powered on constantly since I haven't yet figured out how to program ATTiny85 without a bootloader (or with a minimal one). Default boot times are over 2 seconds. This consumes ~2W at all times, so can add up to ~20kWH a year. Will definitely be revisiting this. (#1)
 
-* The case warped a bit after cooling and could use a couple of more screws in the middle of the lid. And/or latches. My FreeCAD-fu is weak ATM.
+* The case warped a bit after cooling and could use a couple of more screws in the middle of the lid. And/or latches. My FreeCAD-fu is weak ATM. (#2)
 
 ## Photos
 
