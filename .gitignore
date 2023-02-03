@@ -1,7 +1,6 @@
+*-backups
+*.kicad_prl
 *.bak
-*.*-bak
-*.bck
-*.tmp
 *.net
 fp-info-cache
 *.FCStd1
